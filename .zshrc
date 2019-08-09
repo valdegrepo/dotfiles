@@ -1,6 +1,5 @@
 export ZSH="YOURHOMEDIR/.oh-my-zsh"
 
-
 ZSH_THEME="powerlevel10k/powerlevel10k"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
