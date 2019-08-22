@@ -1,0 +1,33 @@
+# Path to your oh-my-zsh installation.
+export ZSH="/home/valdeg/.oh-my-zsh"
+ZSH_THEME="powerlevel9k/powerlevel9k"
+# Used Oh-my-zsh plugins
+plugins=(git)
+
+# User configuration
+
+POWERLEVEL9K_MODE='nerdfont-complete'
+POWERLEVEL9K_BACKGROUND_JOBS_VERBOSE_ALWAYS=true
+POWERLEVEL9K_BACKGROUND_JOBS_BACKGROUND="003"
+POWERLEVEL9K_BACKGROUND_JOBS_FOREGROUND="236"
+POWERLEVEL9K_STATUS_HIDE_SIGNAME="true"
+POWERLEVEL9K_STATUS_CROSS="true"
+POWERLEVEL9K_STATUS_OK_BACKGROUND="000"
+POWERLEVEL9K_HOST_TEMPLATE="%n@%2m"
+POWERLEVEL9K_HOST_REMOTE_BACKGROUND="003"
+POWERLEVEL9K_HOST_REMOTE_FOREGROUND="236"
+POWERLEVEL9K_HOST_LOCAL_BACKGROUND="003"
+POWERLEVEL9K_HOST_LOCAL_FOREGROUND="236"
+POWERLEVEL9K_OS_ICON_BACKGROUND="000"
+POWERLEVEL9K_OS_ICON_FOREGROUND="015"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator host dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status background_jobs) 
+source $ZSH/oh-my-zsh.sh
+
+# Aliases
+
+alias zshrc='vim ~/.zshrc'
+alias vimrc="vim ~/.vimrc"
+alias ls="colorls"
+alias ll="colorls -l"
+alias l="colorls -la"
