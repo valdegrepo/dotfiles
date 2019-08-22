@@ -6,6 +6,7 @@
 3) Download powerlevel9k or pwerlevel10k
 
 https://github.com/romkatv/powerlevel10k
+
 https://github.com/Powerlevel9k/powerlevel9k
 
 # Vim plugins
