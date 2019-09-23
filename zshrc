@@ -1,7 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/valdeg/.oh-my-zsh"
 export PATH=$PATH:/var/lib/flatpak/exports/share
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
+
 # Used Oh-my-zsh plugins
 plugins=(git)
 
