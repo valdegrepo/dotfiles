@@ -19,3 +19,7 @@ Autoload plugins dir:  ~/.vim/pack/dist/start
 Colorcheme dir: ~/.vim/colors
 
 vim-deus https://github.com/ajmwagar/vim-deus
+
+# Tmux
+
+Tmux themes https://github.com/jimeh/tmux-themepack      
