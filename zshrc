@@ -77,7 +77,4 @@ alias l="colorls -la"
 alias up="cd .."
 alias cl="clear"
 
-# Run screenfecth
-neofetch
-
 source $ZSH/oh-my-zsh.sh
