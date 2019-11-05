@@ -71,10 +71,11 @@ POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='009'
 # Aliases
 alias zshrc='vim ~/.zshrc'
 alias vimrc="vim ~/.vimrc"
-alias ls="colorls"
-alias ll="colorls -l"
-alias l="colorls -la"
 alias up="cd .."
 alias cl="clear"
 
 source $ZSH/oh-my-zsh.sh
+
+if [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
