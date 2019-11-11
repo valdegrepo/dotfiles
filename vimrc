@@ -3,23 +3,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ajmwagar/vim-deus'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'Yggdroot/indentLine'
 call plug#end()
 
 set encoding=UTF-8
 set number
-set expandtab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-autocmd FileType html setlocal shiftwidth=4 tabstop=4
-autocmd FileType js setlocal shiftwidth=4 tabstop=4
-autocmd FileType css setlocal shiftwidth=4 tabstop=4
-autocmd FileType php setlocal shiftwidth=4 tabstop=4
-
-
 set cursorline
 set cursorcolumn
+
+autocmd FileType * setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType c setlocal shiftwidth=2 tabstop=2
 
 set hlsearch
 set incsearch
@@ -32,12 +26,15 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 20
 let g:netrw_browse_split = 2
-let g:indentLine_char_list = ['¦', '┆', '┊']
 
 if !exists('g:airline_symbols')
-let g:airline_symbols = {}
+    let g:airline_symbols = {}
 endif
 
-let g:airline_symbols.linenr = ''
-let g:airline_symbols.branch = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
