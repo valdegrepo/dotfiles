@@ -11,6 +11,8 @@ set encoding=UTF-8
 set number
 set cursorline
 set cursorcolumn
+set splitbelow
+set splitright
 
 autocmd FileType * setlocal expandtab shiftwidth=4 softtabstop=4
 autocmd FileType c setlocal shiftwidth=2 tabstop=2
