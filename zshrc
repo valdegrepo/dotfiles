@@ -3,20 +3,20 @@ export ZSH="/home/valdeg/.oh-my-zsh"
 export PATH=$PATH:/var/lib/flatpak/exports/share
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # Used Oh-my-zsh plugins
-plugins=(git colored-man-pages web-search)
+plugins=(git colored-man-pages web-search vi-mode)
 
 ####################
 #USER CONFIGURATION#
 ####################
 
 # Enabled prompt segments
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator host dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator host dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(background_jobs status)
 
 # Separators
 POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR=' '
 POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=' '
-POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
+POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=''
 POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=' '
 POWERLEVEL9K_RIGHT_PROMPT_FIRST_SEGMENT_START_SYMBOL=' '
 
