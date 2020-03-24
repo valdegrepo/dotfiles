@@ -3,7 +3,7 @@ export ZSH="/home/valdeg/.oh-my-zsh"
 export PATH=$PATH:/var/lib/flatpak/exports/share
 ZSH_THEME="powerlevel10k/powerlevel10k"
 # Used Oh-my-zsh plugins
-plugins=(git colored-man-pages web-search vi-mode)
+plugins=(git colored-man-pages web-search)
 
 ####################
 #USER CONFIGURATION#
@@ -78,4 +78,22 @@ source $ZSH/oh-my-zsh.sh
 
 if [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default
+fi
+
+dropboxStatus=$(dropbox status)
+warnLine1="
+\n\n
+\t██╗    ██╗ █████╗ ██████╗ ███╗   ██╗██╗███╗   ██╗ ██████╗ ██╗
+\t██║    ██║██╔══██╗██╔══██╗████╗  ██║██║████╗  ██║██╔════╝ ██║
+\t██║ █╗ ██║███████║██████╔╝██╔██╗ ██║██║██╔██╗ ██║██║  ███╗██║
+\t██║███╗██║██╔══██║██╔══██╗██║╚██╗██║██║██║╚██╗██║██║   ██║╚═╝
+\t╚███╔███╔╝██║  ██║██║  ██║██║ ╚████║██║██║ ╚████║╚██████╔╝██╗
+\t ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝
+\n"
+
+warnLine2="\t\tDropbox isn't running!\n\n"
+
+if [ "$dropboxStatus" != "Up to date" ]; then
+    printf "$warnLine1"
+    printf "$warnLine2"
 fi
